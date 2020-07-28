@@ -5,8 +5,7 @@ import Background from './Components/Background'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect
+  Route
 } from 'react-router-dom'
 import { AnimatePresence } from "framer-motion"
 

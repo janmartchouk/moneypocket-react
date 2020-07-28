@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NavigationItem from './NavigationItem'
 import { Link } from 'react-router-dom'
 import createPersistedState from 'use-persisted-state';

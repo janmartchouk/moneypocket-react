@@ -1,6 +1,6 @@
 import React from 'react'
 import capitalize from '../Hooks/capitalize'
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function SumaryItem(props) {
 

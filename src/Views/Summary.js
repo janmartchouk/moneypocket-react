@@ -30,15 +30,18 @@ export default function Summary(props) {
 
         if(inc.length > 0) {
             inc.forEach(item => {
-                total = parseFloat(total + item.amount).toFixed(2)
+                total = parseInt(parseInt(total) + parseInt(item.amount))
             });
         }
+
+        console.log(total)
+
         if(exp.length > 0) {
             exp.forEach(item => {
-                total = parseFloat(total - item.amount).toFixed(2)
+                total = parseInt(parseInt(total) - parseInt(item.amount))
             });
         }
-        return total
+        return parseFloat(total).toFixed(2)
     }
 
     function totalMonth(arr) {
@@ -46,11 +49,11 @@ export default function Summary(props) {
         if(arr.length > 0) {
             arr.forEach(item => {
                 if(isLastMonth(item.id)) {
-                    total = parseFloat(total + item.amount).toFixed(2)
+                    total = parseInt(parseInt(total) + parseInt(item.amount))
                 }
             });
         }
-        return total
+        return parseFloat(total).toFixed(2)
     }
 
     return (
