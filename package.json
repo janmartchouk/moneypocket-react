@@ -9,6 +9,12 @@
     "appId": "com.jan.moneypocket",
     "win": {
       "icon": "build/icon.ico"
+    },
+    "dmg": {
+      "icon": "build/icon.icns"
+    },
+    "mac": {
+      "icon": "build/icon.icns"
     }
   },
   "main": "public/electron.js",
