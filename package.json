@@ -1,11 +1,15 @@
 {
-  "name": "moneypocket-react",
+  "name": "Moneypocket",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "description": "<your project description>",
   "author": "Jan",
   "build": {
-    "appId": "com.jan.moneypocket"
+    "appId": "com.jan.moneypocket",
+    "win": {
+      "icon": "build/icon.ico"
+    }
   },
   "main": "public/electron.js",
   "homepage": "./",
