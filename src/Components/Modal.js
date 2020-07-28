@@ -21,6 +21,7 @@ export default function Modal(props) {
             newItem.income = income;
             newItem.id = + new Date()
             console.log(newItem);
+            props.handleAddItem(newItem);
             props.setModalOpen(false);
         }
     }

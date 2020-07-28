@@ -5,7 +5,7 @@ const path = require("path");
 const isDev = require("electron-is-dev");
 let mainWindow;
 function createWindow() {
-mainWindow = new BrowserWindow({ width: 1000, height: 600, webPreferences: {'nodeIntegration': true}, icon: __dirname + '/logo192.png'});
+mainWindow = new BrowserWindow({ width: 1200, height: 600, webPreferences: {'nodeIntegration': true}, icon: __dirname + '/logo192.png'});
 mainWindow.loadURL(
 isDev
 ? "http://localhost:3000"
