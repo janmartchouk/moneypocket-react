@@ -46,8 +46,8 @@ function App() {
     'bg1': 'white',
     'bg2': 'gray-100',
     'bg3': 'gray-300',
-    'fg1': 'gray-800',
-    'fg2': 'gray-600',
+    'fg1': 'gray-900',
+    'fg2': 'gray-800',
     'accent': 'purple'
   })
 
@@ -57,8 +57,8 @@ function App() {
         'bg1': 'white',
         'bg2': 'gray-100',
         'bg3': 'gray-300',
-        'fg1': 'gray-800',
-        'fg2': 'gray-600',
+        'fg1': 'gray-900',
+        'fg2': 'gray-800',
         'accent': theme.accent,
       })
     } else if (settings.darktheme) {
@@ -75,7 +75,7 @@ function App() {
 
 
 
-  function handleAddItem(newItem) {
+  function handleAddItem(newItem, setModalOpen) {
       addItem(newItem, expenses, setExpenses, incomes, setIncomes);
   }
 

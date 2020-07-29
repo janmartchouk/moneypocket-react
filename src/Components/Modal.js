@@ -24,8 +24,8 @@ export default function Modal(props) {
             newItem.income = income;
             newItem.id = + new Date()
             console.log(newItem);
-            props.handleAddItem(newItem);
-            props.setModalOpen(false);
+            props.handleAddItem(newItem)
+            props.setModalOpen(false)
         }
     }
 
@@ -36,7 +36,7 @@ export default function Modal(props) {
                     <div className="ModalInputs flex">
                         <Input type="number" placeholder="Amount" handleChange={setAmount}></Input>
                         <Input type="text" placeholder="Name" handleChange={setName}></Input>
-                        <button id="submit" className={`transition ease-in-out duration-200 bg-${theme.accent}-600 text-${theme.fg2} rounded focus:border-${theme.accent}-700 focus:outline-none border-${theme.accent}-600 border-4 mt-4 p-3 w-auto`}>Add</button>
+                        <button id="submit" className={`transition ease-in-out duration-200 bg-${theme.accent}-600 text-white rounded focus:border-${theme.accent}-700 focus:outline-none border-${theme.accent}-600 border-4 mt-4 p-3 w-auto`}>Add</button>
                     </div>
                 </motion.div>
             </div>
