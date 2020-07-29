@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './CSS/main.css';
 import './CSS/style.css';
+import './CSS/toggle.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

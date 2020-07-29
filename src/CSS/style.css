@@ -20,6 +20,8 @@ body::-webkit-scrollbar-thumb {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 a:focus {
@@ -29,16 +31,6 @@ a:focus {
 .navtext {
   -webkit-transition: .2s ease;
   transition: .2s ease;
-}
-
-.summary-total {
-  background: -webkit-gradient(linear, left top, right bottom, from(#b794f4), to(#805ad5));
-  background: linear-gradient(to bottom right, #b794f4, #805ad5);
-  color: white;
-}
-
-.summary-total > span {
-  color: white;
 }
 
 .summary-headerItem:not(:last-of-type) {

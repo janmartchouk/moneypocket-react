@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
+import Emoji from '../Components/Emoji'
+import {ThemeContext} from '../App'
 
 export default function Expenses(props) {
+
+    let theme = useContext(ThemeContext)
     
     return (
         <motion.div
@@ -9,9 +13,9 @@ export default function Expenses(props) {
         animate="animate"
         exit="exit"
         variants={props.pageVariants}
-        className="z-20 bg-white h-screen"
+        className={`z-20 bg-${theme.bg} h-screen`}
         >
-            <h1 className="px-3 py-1 rounded inline-block summary-title font-sans text-2xl subpixel-antialiased text-gray-800 mb-4"><span role='img' aria-label="Dollar note flying away">💸</span> Expenses</h1>
+            <h1 className={`py-1 rounded inline-block summary-title font-sans text-2xl subpixel-antialiased text-${theme.fg1} mb-4`}><Emoji alt="Money with wings" code="&#x1F4B8;"/> Expenses</h1>
             {props.expenseList}
         </motion.div>
     )

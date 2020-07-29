@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
+import Emoji from '../Components/Emoji'
+import {ThemeContext} from '../App'
 
 export default function Incomes(props) {
+
+    let theme = useContext(ThemeContext)
+
     return (
         <motion.div
         initial="initial"
         animate="animate"
         exit="exit"
         variants={props.pageVariants}
-        className="z-20 bg-white h-screen"
+        className={`z-20 bg-${theme.bg1} h-screen`}
         >
-            <h1 className="px-3 py-1 rounded inline-block summary-title font-sans text-2xl subpixel-antialiased text-gray-800 mb-4"><span role='img' aria-label="Dollar note">💵</span> Incomes</h1>
+            <h1 className={`py-1 rounded inline-block summary-title font-sans text-2xl subpixel-antialiased text-${theme.fg1} mb-4`}><Emoji alt="Money bag" code="&#x1F4B0;"/> Incomes</h1>
             {props.incomeList}
         </motion.div>
     )

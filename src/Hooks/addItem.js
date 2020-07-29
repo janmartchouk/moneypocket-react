@@ -24,7 +24,6 @@ export default function addItem(newItem, expenses, setExpenses, incomes, setInco
         return true;
 
       } else {
-        console.log('newItem doesnt have all props')
         return false;
       }
 

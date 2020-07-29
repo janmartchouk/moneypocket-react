@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SummaryHeader from '../Components/SummaryHeader'
 import SummaryItem from '../Components/SummaryItem'
 import timeConverter from '../Hooks/timeConverter'
 import {motion, AnimatePresence} from 'framer-motion'
 import isLastMonth from '../Hooks/isLastMonth'
+import {ThemeContext} from '../App'
 
 
 export default function Summary(props) {
+
+    let theme = useContext(ThemeContext)
 
     //concat incomes and expenses
     var allItems = props.expenses.concat(props.incomes)
@@ -62,9 +65,9 @@ export default function Summary(props) {
         animate="animate"
         exit="exit"
         variants={props.pageVariants}
-        className="z-20 bg-white h-screen"
+        className={`z-20 bg-${theme.bg1} h-screen`}
         >
-            <SummaryHeader total={total(props.incomes, props.expenses)} monthIncomes={totalMonth(props.incomes)} monthExpenses={totalMonth(props.expenses)} username="Jan" handleAddItem={props.handleAddItem}></SummaryHeader>
+            <SummaryHeader total={total(props.incomes, props.expenses)} monthIncomes={totalMonth(props.incomes)} monthExpenses={totalMonth(props.expenses)} handleAddItem={props.handleAddItem}></SummaryHeader>
             {allList}
         </motion.div>
     )
