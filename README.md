@@ -1,10 +1,11 @@
 # Moneypocket
 moneypocket-react v.1.0.0
 
-### This is a simple money tracking app, built mainly for the purpose of learning react, electron and tailwindcss, although it is completely usable.
+### This is a simple personal finance manager, built mainly for the purpose of learning react, electron and tailwindcss, although it is completely usable.
 Moneypocket is available cross-platform for windows, macOS and linux (AppImage).\
 [Downloads](https://github.com/realnajan/moneypocket-react/releases/)
 
+![Image](https://github.com/realnajan/moneypocket-react/blob/master/images/moneypocket-light.png)
 #
 &nbsp;
 &nbsp;
