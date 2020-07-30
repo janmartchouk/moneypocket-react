@@ -16,7 +16,7 @@ export default function Expenses(props) {
         className={`z-20 bg-${theme.bg} h-screen`}
         >
             <h1 className={`py-1 rounded inline-block summary-title font-sans text-2xl subpixel-antialiased text-${theme.fg1} mb-4`}><Emoji alt="Money with wings" code="&#x1F4B8;"/> Expenses</h1>
-            {props.expenseList}
+            <div className={`bg-${theme.bg1}`}>{props.expenseList}</div>
         </motion.div>
     )
 }

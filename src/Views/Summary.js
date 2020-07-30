@@ -33,7 +33,7 @@ export default function Summary(props) {
 
         if(inc.length > 0) {
             inc.forEach(item => {
-                total = parseInt(parseInt(total) + parseInt(item.amount))
+                total = parseFloat(parseFloat(total) + parseFloat(item.amount))
             });
         }
 
@@ -41,7 +41,7 @@ export default function Summary(props) {
 
         if(exp.length > 0) {
             exp.forEach(item => {
-                total = parseInt(parseInt(total) - parseInt(item.amount))
+                total = parseFloat(parseFloat(total) - parseFloat(item.amount))
             });
         }
         return parseFloat(total).toFixed(2)
@@ -52,7 +52,7 @@ export default function Summary(props) {
         if(arr.length > 0) {
             arr.forEach(item => {
                 if(isLastMonth(item.id)) {
-                    total = parseInt(parseInt(total) + parseInt(item.amount))
+                    total = parseFloat(parseFloat(total) + parseFloat(item.amount))
                 }
             });
         }
@@ -68,7 +68,7 @@ export default function Summary(props) {
         className={`z-20 bg-${theme.bg1} h-screen`}
         >
             <SummaryHeader total={total(props.incomes, props.expenses)} monthIncomes={totalMonth(props.incomes)} monthExpenses={totalMonth(props.expenses)} handleAddItem={props.handleAddItem}></SummaryHeader>
-            {allList}
+            <div className={`bg-${theme.bg1}`}>{allList}</div>
         </motion.div>
     )
 }
